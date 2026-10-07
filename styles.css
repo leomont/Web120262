@@ -26,3 +26,74 @@ p {
   color: #334155;
   max-width: 65ch; /* Limita el ancho de lectura para una óptima ergonomía visual */
 }
+
+/* ===== INICIO HERO SECTION (Desarrollador 3) ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #e0f2fe, #f1f5f9);
+  border-radius: 1rem;
+}
+
+.hero-content {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hero-btn-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.hero-btn-secondary {
+  border: 2px solid #2563eb;
+  color: #2563eb;
+}
+
+.hero-visual {
+  flex: 1;
+  min-height: 220px;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+@media (max-width: 700px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-content { text-align: center; }
+  .hero-buttons { justify-content: center; }
+  .hero-visual { width: 100%; }
+}
+/* ===== FIN HERO SECTION ===== */
