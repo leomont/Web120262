@@ -1,28 +1,213 @@
-/* 1. Reseteo universal: control total de la geometría de las cajas */
+
+/* 1. Configuración general */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/* 2. Propiedades base y herencia en el elemento raíz visible */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  line-height: 1.6;
-  color: #1a1a1a;
-  background-color: #f8fafc;
-  padding: 2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.7;
+    color: #333044;
+    background-color: #f8f7fc;
+    min-height: 100vh;
 }
 
-/* 3. Estilización de la jerarquía de texto */
+/* 2. Encabezado y navegación */
+.encabezado {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 7%;
+    gap: 25px;
+    box-shadow: 0 3px 12px rgba(70, 54, 110, 0.08);
+    border-bottom: 1px solid #e9e2f5;
+}
+
+/* 3. Logo y nombre del sitio */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 65px;
+    height: auto;
+    display: block;
+}
+
+.logo span {
+    color: #7160a8;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 4. Menú de navegación */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu a {
+    color: #514968;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #9675d4;
+}
+
+/* 5. Botón de acción */
+.boton-accion {
+    background-color: #a58bd4;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.boton-accion:hover {
+    background-color: #8064b5;
+    transform: translateY(-2px);
+}
+
+/* 6. Contenido principal */
+main {
+    width: 86%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* 7. Presentación */
+.presentacion {
+    background: linear-gradient(135deg, #eee7fa, #f8f5ff);
+    margin-top: 45px;
+    padding: 45px;
+    border-radius: 18px;
+    border: 1px solid #e5dcf5;
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: #dfd2f5;
+    color: #695092;
+    padding: 5px 13px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
 h1 {
-  font-size: 2rem;
-  color: #0f172a;
-  margin-bottom: 1rem;
+    color: #51406f;
+    font-size: 34px;
+    line-height: 1.3;
+    margin-bottom: 20px;
 }
 
-p {
-  font-size: 1.125rem;
-  color: #334155;
-  max-width: 65ch; /* Limita el ancho de lectura para una óptima ergonomía visual */
+.presentacion p {
+    color: #625c70;
+    font-size: 17px;
+    max-width: 680px;
+}
+
+/* 8. Secciones de contenido */
+.contenido {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    background-color: #ffffff;
+    margin-top: 25px;
+    padding: 30px;
+    border-radius: 14px;
+    border: 1px solid #eee8f7;
+    transition: box-shadow 0.3s;
+}
+
+.contenido:hover {
+    box-shadow: 0 6px 20px rgba(94, 72, 140, 0.10);
+}
+
+/* 9. Números decorativos */
+.numero {
+    background-color: #eee6fa;
+    color: #8064b5;
+    min-width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+/* 10. Texto de las secciones */
+.texto-contenido h2 {
+    color: #51406f;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.texto-contenido p {
+    color: #625c70;
+    font-size: 16px;
+    max-width: 750px;
+}
+
+/* 11. Adaptación a pantallas pequeñas */
+@media (max-width: 700px) {
+    .encabezado {
+        flex-direction: column;
+        padding: 20px;
+        gap: 18px;
+    }
+
+    .logo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    .presentacion {
+        padding: 25px;
+        margin-top: 25px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .contenido {
+        padding: 22px;
+        gap: 15px;
+    }
+
+    .texto-contenido h2 {
+        font-size: 20px;
+    }
 }
