@@ -1,59 +1,78 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Juego de caracteres unicode para admitir tildes, eñes y caracteres internacionales -->
-  <meta charset="UTF-8">
-  
-  <!-- Configura el viewport para que la escala y ancho se adapten al dispositivo móvil -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Fundamentos de HTML5 y CSS3 | Sesión 1</title>
-  
-  <!-- Vinculación de la hoja de estilos externa -->
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos de HTML5 y CSS3</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Encabezado y navegación -->
     <header class="encabezado">
-    <div class="logo">
-        Programación Web 1
-    </div>
+        <div class="logo">
+            <img src="img/logo-ucaldas.png" alt="Universidad de Caldas">
+            <span>Fundamentos Web</span>
+        </div>
 
-    <nav class="menu">
-        <a href="#">Inicio</a>
-        <a href="#">Nosotros</a>
-        <a href="#">Servicios</a>
-        <a href="#">Contacto</a>
-    </nav>
+        <nav class="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
 
-    <button class="boton-accion">Comenzar</button>
-</header>
+        <a href="#inicio" class="boton-accion">Comenzar</a>
+    </header>
 
+    <!-- Contenido principal -->
     <main>
-      <section>
-        <!-- Sección de contenido principal -->
-           <!-- Encabezado principal: Único por documento por jerarquía y accesibilidad -->
-        <h1>Introducción al Desarrollo Web Moderno</h1>
-  
-        <!-- Párrafo estructurado con contenido descriptivo -->
-        <p>
-            HTML estructura el contenido de la web mediante elementos semánticos, 
-            mientras que CSS toma esos elementos para definir su presentación, geometría y estilo visual.
-        </p>
-      </section>
-      <article>
-        <!-- Artículo con contenido específico -->
-        <h2>¿Qué es HTML5?</h2>
-        <p>
-            HTML5 es la última versión del lenguaje de marcado HTML, que introduce nuevas etiquetas y funcionalidades 
-            para mejorar la semántica, accesibilidad y multimedia en la web.
-        </p>
-      </article>
+
+        <!-- Sección de presentación -->
+        <section class="presentacion" id="inicio">
+            <span class="etiqueta">Aprende desarrollo web</span>
+
+            <h1>Introducción al Desarrollo Web Moderno</h1>
+
+            <p>
+                HTML estructura el contenido de la web mediante elementos
+                semánticos, mientras que CSS define su presentación,
+                distribución y estilo visual.
+            </p>
+        </section>
+
+        <!-- Sección Nosotros -->
+        <section class="contenido" id="nosotros">
+            <div class="numero">01</div>
+
+            <div class="texto-contenido">
+                <h2>¿Qué es HTML5?</h2>
+
+                <p>
+                    HTML5 es una versión del lenguaje de marcado HTML que
+                    permite organizar el contenido de las páginas web.
+                    Incluye elementos semánticos y herramientas para integrar
+                    contenido multimedia y mejorar la accesibilidad.
+                </p>
+            </div>
+        </section>
+
+        <!-- Sección de contacto -->
+        <section class="contenido" id="contacto">
+            <div class="numero">02</div>
+
+            <div class="texto-contenido">
+                <h2>¿Qué es CSS3?</h2>
+
+                <p>
+                    CSS permite personalizar la apariencia de una página web
+                    mediante colores, tamaños, márgenes, fondos y otros
+                    estilos que mejoran la presentación del contenido.
+                </p>
+            </div>
+        </section>
+
     </main>
 
-
 </body>
-<footer>
-  <!-- Pie de página con información adicional -->
-  <p>&copy; 2024 Fundamentos de HTML5 y CSS3. Todos los derechos reservados.</p>            
-</footer>
 </html>
