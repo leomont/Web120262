@@ -26,3 +26,62 @@ p {
   color: #334155;
   max-width: 65ch; /* Limita el ancho de lectura para una óptima ergonomía visual */
 }
+/* =========================================
+   ESTILOS DEL FOOTER (Desarrollador 9 - Alejandro Piedrahita)
+   ========================================= */
+
+.site-footer {
+  background-color: #0f172a; /* Fondo oscuro para contraste */
+  color: #e2e8f0;
+  padding: 3rem 2rem 1rem;
+  margin-top: 4rem; /* Separación del contenido principal */
+  border-top: 4px solid #3b82f6; /* Línea decorativa azul */
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1 1 250px; /* Hace que las columnas sean responsivas */
+}
+
+.footer-section h3 {
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+}
+
+.footer-section ul {
+  list-style: none; /* Quita los puntos de la lista */
+}
+
+.footer-section ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-section a {
+  color: #93c5fd; /* Azul claro para los enlaces */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Efecto Hover solicitado en los requisitos */
+.footer-section a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #1e293b;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
